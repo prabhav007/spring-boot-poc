@@ -7,4 +7,4 @@ RUN java -Djarmode=layertools -jar application.jar extract
 FROM azul/zulu-openjdk:17-jre-latest
 WORKDIR application
 COPY --from=builder application/dependencies/ application/snapshot-dependencies/ application/spring-boot-loader/ application/application/ ./
-ENTRYPOINT ["java", "org.springframework.boot.loader.JarLauncher"]
+ENTRYPOINT ["java", "org.springframework.boot.loader.launch.JarLauncher"]
