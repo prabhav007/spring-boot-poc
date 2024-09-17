@@ -1,0 +1,28 @@
+openapi: 3.0.3
+info:
+  title: Spring Boot POC
+  description: Spring Boot POC
+  version: 1.0.0
+servers:
+  - url: 'http://localhost:8080'
+paths:
+  /user/{code}:
+    get:
+      tags:
+        - demo
+      operationId: readUser
+      parameters:
+        - name: code
+          in: path
+          required: true
+          example: USR001
+          description: Code of the user to read
+          schema:
+            type: string
+            format: String
+            minLength: 1
+            maxLength: 64
+            pattern: '^[a-zA-Z0-9_]*$'
+      responses:
+        '200':
+          description: OK

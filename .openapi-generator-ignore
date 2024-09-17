@@ -1,0 +1,7 @@
+**/OpenApiGeneratorApplicationTests.java
+**/openapitools/**
+**/application.properties
+**/openapi.yaml
+**/pom.xml
+**/.openapi-generator-ignore
+**/README.md
