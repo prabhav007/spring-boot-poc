@@ -112,6 +112,55 @@
           </execution>
         </executions>
       </plugin>
+      <plugin>
+        <groupId>io.fabric8</groupId>
+        <artifactId>docker-maven-plugin</artifactId>
+        <version>0.45.0</version>
+        <configuration>
+          <useColor>true</useColor>
+          <images>
+            <image>
+              <name>spring-boot-poc:${project.version}</name>
+              <alias>application</alias>
+              <build>
+                <contextDir>${project.basedir}</contextDir>
+                <dockerFile>Dockerfile</dockerFile>
+                <args>
+                  <JAR_FILE>target/${project.build.finalName}.jar</JAR_FILE>
+                </args>
+              </build>
+            </image>
+          </images>
+        </configuration>
+        <executions>
+          <execution>
+            <id>build</id>
+            <goals>
+              <goal>build</goal>
+            </goals>
+            <phase>package</phase>
+            <configuration>
+              <images>
+                <image>
+                  <alias>application</alias>
+                  <build>
+                    <tags>
+                      <tag>latest</tag>
+                    </tags>
+                  </build>
+                </image>
+              </images>
+            </configuration>
+          </execution>
+          <execution>
+            <id>push</id>
+            <goals>
+              <goal>push</goal>
+            </goals>
+            <phase>deploy</phase>
+          </execution>
+        </executions>
+      </plugin>
     </plugins>
   </build>
 
