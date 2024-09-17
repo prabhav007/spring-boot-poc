@@ -27,6 +27,13 @@
     <tag/>
     <url/>
   </scm>
+  <distributionManagement>
+    <repository>
+      <id>github</id>
+      <name>GitHub Packages</name>
+      <url>https://maven.pkg.github.com/prabhav007/spring-boot-poc</url>
+    </repository>
+  </distributionManagement>
   <properties>
     <java.version>17</java.version>
   </properties>
