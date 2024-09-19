@@ -1,7 +1,8 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: Spring Boot POC
+  name: spring-boot-poc
+  description: Spring Boot POC
 spec:
   type: service
 #  owner: user:guest
