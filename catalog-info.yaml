@@ -5,5 +5,5 @@ metadata:
   description: Spring Boot POC
 spec:
   type: service
-#  owner: user:guest
+  owner: user:guest
   lifecycle: experimental
