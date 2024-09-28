@@ -6,7 +6,7 @@ metadata:
   annotations:
     github.com/project-slug: prabhav007/spring-boot-poc
     backstage.io/source-location: url:https://github.com/prabhav007/spring-boot-poc
-    argocd/app-name: sprig-boot-poc
+    argocd/app-name: spring-boot-poc
 spec:
   type: service
   owner: user:guest
